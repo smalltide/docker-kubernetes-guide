@@ -35,6 +35,12 @@ docker create and docker start
   > docker container ls -a
   > docker start -a <container_id>
 ```
-![alt text](https://github.com/smalltide/docker-kubernetes-guide/blob/master/img/container1.png "container1")
-![alt text](https://github.com/smalltide/docker-kubernetes-guide/blob/master/img/container2.png "container2")
+![](https://raw.githubusercontent.com/smalltide/docker-kubernetes-guide/master/img/container1.png "container1")
+![](https://raw.githubusercontent.com/smalltide/docker-kubernetes-guide/master/img/container2.png "container2")
+
+```
+  > 
+  > 
+  > 
+```
 

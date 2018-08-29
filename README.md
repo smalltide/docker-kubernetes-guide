@@ -38,9 +38,26 @@ docker create and docker start
 ![](https://raw.githubusercontent.com/smalltide/docker-kubernetes-guide/master/img/container1.png "container1")
 ![](https://raw.githubusercontent.com/smalltide/docker-kubernetes-guide/master/img/container2.png "container2")
 
+remove unuse docker resource
 ```
-  > 
-  > 
-  > 
+  > docker system prune
+```
+watch log in docker container
+```
+  > docker logs <container_id>
+```
+stop docker container
+```
+  > docker stop <container_id>
+  > docker kill <container_id>
+```
+docker run a redis server
+```
+  > docker run redis
+  > docker exec -it <container_id>
+```
+build a docker image
+```
+  > docker build -t ice-redis-server .
 ```
 

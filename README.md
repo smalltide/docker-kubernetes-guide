@@ -56,8 +56,15 @@ docker run a redis server
   > docker run redis
   > docker exec -it <container_id>
 ```
-build a docker image
+build a docker image from Dockerfile
 ```
   > docker build -t ice-redis-server .
 ```
-
+build docker image from a container
+```
+  > docker commit -c '<CMD>' <container_id>
+```
+docker run and port mapping
+```
+  > docker run -p 8080:8080 <docker_image>
+```

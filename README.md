@@ -68,3 +68,16 @@ docker run and port mapping
 ```
   > docker run -p 8080:8080 <docker_image>
 ```
+docker run container in background
+```
+  > docker run -d redis
+```
+use docker-compose to run multi-containers
+```
+  > cd redisvisits
+  > docker-compose up
+  > docker-compose up -d
+  > docker-compose up --build
+  > docker-compose down
+  > docker-compose ps
+```

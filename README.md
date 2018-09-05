@@ -81,3 +81,32 @@ use docker-compose to run multi-containers
   > docker-compose down
   > docker-compose ps
 ```
+build dockerfile with -f
+```
+  > cd frontend
+  > docker build -t frontend -f Dockerfile.dev .
+```
+run docker container with volume mapping
+```
+  > cd frontend
+  > docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app <image_id>
+  > docker-compose up
+```
+run docker container with npm test
+```
+  > cd frontend
+  > docker run -it <image_id> npm run test
+  > docker exec -it <container_id> npm run test
+```
+docker attach container
+```
+  > docker container ls -a
+  > docker attach <container_id>
+```
+docker attach container
+```
+  > cd frontend
+  > docker build -t frontend .
+  > docker run -p 8080:80 frontend
+```
+

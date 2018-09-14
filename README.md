@@ -110,7 +110,7 @@ docker attach container
   > docker run -p 8080:80 frontend
 ```
 
-build fib multi-container app
+build fib multi-container app image
 ```
   > cd complex
   > cd client
@@ -124,5 +124,10 @@ build fib multi-container app
   > cd worker
   > docker build -f Dockerfile.dev -t smalltides/fib-worker .
   > docker run smalltides/fib-worker
+```
+run fib multi-container app
+```
+  > cd complex
+  > docker-compose up
 ```
 

@@ -103,13 +103,6 @@ docker attach container
   > docker container ls -a
   > docker attach <container_id>
 ```
-docker attach container
-```
-  > cd frontend
-  > docker build -t frontend .
-  > docker run -p 8080:80 frontend
-```
-
 build fib multi-container app image
 ```
   > cd complex
@@ -130,4 +123,3 @@ run fib multi-container app
   > cd complex
   > docker-compose up
 ```
-

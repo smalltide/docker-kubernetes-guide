@@ -1,0 +1,20 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t smalltides/client-test -f ./client/Dockerfile.dev .
+
+script:
+  - docker run smalltides/client-test npm test -- --coverage
+
+after_success:
+  - docker build -t smalltides/fib-client ./client
+  - docker build -t smalltides/fib-nginx ./nginx
+  - docker build -t smalltides/fib-server ./server
+  - docker build -t smalltides/fib-worker ./worker
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - docker push smalltides/fib-client
+  - docker push smalltides/fib-nginx
+  - docker push smalltides/fib-server
+  - docker push smalltides/fib-worker

@@ -1,0 +1,40 @@
+{
+	"AWSEBDockerrunVersion": 2,
+	"containerDefinitions": [
+		{
+			"name": "client",
+			"image": "smalltides/fib-client",
+			"hostname": "client",
+			"essential": false,
+			"memory": 128
+		},
+		{
+			"name": "api",
+			"image": "smalltides/fib-server",
+			"hostname": "api",
+			"essential": false,
+			"memory": 128
+		},
+		{
+			"name": "worker",
+			"image": "smalltides/fib-worker",
+			"hostname": "worker",
+			"essential": false,
+			"memory": 128
+		},
+		{
+			"name": "nginx",
+			"image": "smalltides/fib-nginx",
+			"hostname": "nginx",
+			"essential": true,
+			"portMappings": [
+				{
+					"hostPort": 80,
+					"containerPort": 80
+				}
+			],
+			"links": [ "client", "server" ],
+			"memory": 128
+		}
+	]
+}

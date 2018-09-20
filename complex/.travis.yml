@@ -18,3 +18,16 @@ after_success:
   - docker push smalltides/fib-nginx
   - docker push smalltides/fib-server
   - docker push smalltides/fib-worker
+
+deploy:
+  provider: elasticbeanstalk
+  region: "ap-northeast-1"
+  app: "fib-app"
+  env: "DockerFib-env"
+  bucket_name: "elasticbeanstalk-ap-northeast-1-408772917132"
+  bucket_path: "docker-fib"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"

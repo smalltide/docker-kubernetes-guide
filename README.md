@@ -123,3 +123,48 @@ run fib multi-container app
   > cd complex
   > docker-compose up
 ```
+install minikube
+```
+  > brew install kubectl
+  > brew cask install minikube
+  > install VirtualBox
+  > minikube delete (if need, if install fail)
+  > minikube start
+  > kubectl cluster-info
+```
+apply k8s config
+```
+  > cd simplek8s
+  > kubectl apply -f client-pod.yaml
+  > kubectl apply -f client-node-port.yaml
+  > kubectl get pods
+  > kubectl get services
+  > minikube ip
+```
+k8s pod describe, logs, exec
+```
+  > kubectl describe pod <pod-name>
+  > kubectl logs <pod-name>
+  > kubectl exec -it <pod-name> <command>
+```
+delete k8s object
+```
+  > cd simplek8s
+  > kubectl delete -f client-pod.yaml
+```
+k8s deployment
+```
+  > kubectl apply -f client-deployment.yaml
+  > kubectl get deployments
+  > kubectl get pods -o wide
+```
+force update k8s container image
+```
+  > kubectl set image deployment/fib-client-deployment fib-client=smalltides/fib-client
+  > kubectl set image <object-type>/<object-name> <container_name>=<new_image_use>
+```
+get minikube docker env
+```
+  > minikube docker-env
+  > eval $(minikube docker-env)
+```

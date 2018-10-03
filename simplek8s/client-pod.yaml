@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: fib-client-pod
+  labels:
+    component: web
+spec:
+  containers:
+    - name: fib-client
+      image: smalltides/fib-client
+      ports:
+        - containerPort: 3000

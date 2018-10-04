@@ -168,4 +168,11 @@ get minikube docker env
   > minikube docker-env
   > eval $(minikube docker-env)
 ```
+
 ![](https://raw.githubusercontent.com/smalltide/docker-kubernetes-guide/master/img/complex-k8s-infra.png "complex-k8s-infra")
+
+apply k8s config from a folder
+```
+  > cd complexk8s
+  > kubectl apply -f k8s
+```

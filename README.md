@@ -183,3 +183,9 @@ get k8s storage class (PROVISIONER)
   > kubectl get pv
   > kubectl get pvc
 ```
+create k8s secret
+```
+  > kubectl create secret generic pgpassword --from-literal PGPASSWORD=postgres_password
+  > kubectl create secret <secret_type> <secret_name> --from-literal key=value
+  > kubectl get secrets
+```

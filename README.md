@@ -176,3 +176,10 @@ apply k8s config from a folder
   > cd complexk8s
   > kubectl apply -f k8s
 ```
+get k8s storage class (PROVISIONER)
+```
+  > kubectl get storageclass
+  > kubectl get persistentVolumes
+  > kubectl get pv
+  > kubectl get pvc
+```

@@ -189,3 +189,20 @@ create k8s secret
   > kubectl create secret <secret_type> <secret_name> --from-literal key=value
   > kubectl get secrets
 ```
+install ingress-nginx
+```
+  > kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/mandatory.yaml
+  > minikube addons enable ingress
+  > kubectl --namespace=ingress-nginx get deployment
+  > kubectl --namespace=ingress-nginx get pod
+  > kubectl --namespace=ingress-nginx get <resource_type>
+  > kubectl apply -f k8s
+  > kubectl get ingress
+```
+open minikube dashboard
+```
+  > minikube dashboard
+```
+
+
+

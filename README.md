@@ -1,5 +1,5 @@
 # docker-kubernetes-guide
-Learn Docker, Travis, Kubernetes and AWS to Build, test, and deploy applications production-style development workflows
+Learn Docker, Travis, Kubernetes and AWS, GCP GKE to Build, test, and deploy applications production-style development workflows
  
 
 Course Resource
@@ -11,6 +11,7 @@ Skills
 3. Kubernetes
 4. AWS
 5. DevOps
+6. GCP GKE
 
 chech docker version and run first docker container
 ```
@@ -203,6 +204,3 @@ open minikube dashboard
 ```
   > minikube dashboard
 ```
-
-
-

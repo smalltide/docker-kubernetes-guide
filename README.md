@@ -204,3 +204,28 @@ open minikube dashboard
 ```
   > minikube dashboard
 ```
+run travis CLI in docker
+```
+  > docker run -it -v $(pwd):/app ruby:2.3 sh
+  > gem install travis --no-rdoc --no-ri
+  > travis login
+  > travis encrypt-file service-account.json -r smalltide/docker-kubernetes-guide
+```
+install Helm (k8s package manager)
+```
+  > https://docs.helm.sh/using_helm/
+  > https://docs.helm.sh/using_helm/#gke
+  > curl https://raw.githubusercontent.com/helm/helm/master/scripts/get > get_helm.sh
+  > chmod 700 get_helm.sh
+  > ./get_helm.sh
+```
+GKE service account
+```
+  > kubectl create serviceaccount --namespace kube-system tiller
+  > kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin --serviceaccount=kube-system:tiller
+  > helm init --service-account tiller --upgrade
+```
+install ingress-nginx using Helm
+```
+  > helm install stable/nginx-ingress --name my-nginx --set rbac.create=true
+```

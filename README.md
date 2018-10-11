@@ -229,3 +229,9 @@ install ingress-nginx using Helm
 ```
   > helm install stable/nginx-ingress --name my-nginx --set rbac.create=true
 ```
+k8s get certificates
+```
+  > kubectl get certificates
+  > kubectl describe certificates
+  > kubectl get secrets
+```

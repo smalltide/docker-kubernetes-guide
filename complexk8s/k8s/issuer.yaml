@@ -1,0 +1,11 @@
+apiVersion: certmanager.k8s.io/v1alphal1
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt-prod
+spec:
+  acme:
+    server: https://acme-v02.api.letsencrypt.org.directory
+    email: 'smalltides@gmail.com'
+    privateKeySecretRef:
+      name: letsencrypt-prod
+    http01: {}
